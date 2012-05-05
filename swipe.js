@@ -36,13 +36,14 @@ window.Swipe = function(element, options) {
 
   // add event listeners
   if (this.element.addEventListener) {
-    this.element.addEventListener('touchstart', this, false);
-    this.element.addEventListener('touchmove', this, false);
-    this.element.addEventListener('touchend', this, false);
-    this.element.addEventListener('webkitTransitionEnd', this, false);
-    this.element.addEventListener('msTransitionEnd', this, false);
-    this.element.addEventListener('oTransitionEnd', this, false);
-    this.element.addEventListener('transitionend', this, false);
+    var z = this.element;
+    z.addEventListener('touchstart', this, false);
+    z.addEventListener('touchmove', this, false);
+    z.addEventListener('touchend', this, false);
+    z.addEventListener('webkitTransitionEnd', this, false);
+    z.addEventListener('msTransitionEnd', this, false);
+    z.addEventListener('oTransitionEnd', this, false);
+    z.addEventListener('transitionend', this, false);
     window.addEventListener('resize', this, false);
   }
 
